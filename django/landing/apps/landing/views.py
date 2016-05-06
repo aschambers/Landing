@@ -3,7 +3,7 @@ from django.shortcuts import render # inserted this line
 def index(request):
   context = {
       'questions': [
-           {'firstname': 'Michael', 'lastname': 'Choi', 'activity': 'basketball', 'language': 'Python'}
+           {'firstname': 'Alan', 'lastname': 'Schambers', 'activity': 'Basketball', 'language': 'Python'}
        ]
   }
   return render(request, 'landing/index.html', context)
