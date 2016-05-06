@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>A Landing Page</title>
+	    {% load staticfiles %}
+		<link rel="stylesheet" href="{% static 'landing/style.css' %}">
+    </head>
+    <body>
+    	<h2>Welcome to My First Django App</h2>
+        {% if questions %}
+        <ul>
+            {% for question in questions %}
+            <li>My name is  {{question.firstname}} {{question.lastname}}</li>
+            <li>I like to play {{question.activity}}</li>
+            <li>My favorite programming language {{question.language}}</li>
+            <br>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </body>
+</html>
